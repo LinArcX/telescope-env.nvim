@@ -2,7 +2,7 @@
 
 # Demo
 
-![Demo](./env.gif)
+![Demo](./telescope-env.gif)
 
 
 # Installation
