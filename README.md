@@ -46,9 +46,21 @@ If you have any idea to improve this project, please create a pull-request for i
 
 2. There should be a one-to-one relation between features and pull requests. Please create separate pull-requests for each feature.
 3. Please use [snake_case](https://en.wikipedia.org/wiki/Snake_case) for function names ans local variables
+4. If your PR have more than one commit, please squash them into one.
+5. Use meaningful name for variables and functions. Don't use abbreviations as far as you can.
+
+
+# News
+
+* 2022/01/13
+  * append environment name to buffer( default behavior `<cr>`)
+  * append environment value to buffer( mapping `<c-a>`)
+  * edit environment value for the current session( mapping `<c-e>`)
+  * fixes issue with fish terminal in multiline values
 
 # Roadmap :blue_car:
-- [x] copy selected value when select an item in picker.
-- [ ] ability to add temporary variables.
-- [ ] use previews, because some variables like `PATH` don't fit on screen.
-- [ ] `PATH` is a special variable! It's cool to allow people to add, remove and edit items of it.
+- :heavy_check_mark: append environment name/value to buffer. (Thanks to: [sbulav](https://github.com/sbulav))
+- :heavy_check_mark: edit environment value for the current session. (Thanks to: [sbulav](https://github.com/sbulav))
+- [ ] ability to add new environment variables.
+- [ ] use telescope previews, because some variables like `PATH` don't fit on screen.
+- [ ] `PATH` is a special variable! It's cool to allow people to add, remove and edit items to/from/of it.
