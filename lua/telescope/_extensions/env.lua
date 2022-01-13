@@ -3,7 +3,6 @@ local finders = require("telescope.finders")
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 local make_entry = require("telescope.make_entry")
-
 local conf = require("telescope.config").values
 local entry_display = require("telescope.pickers.entry_display")
 
