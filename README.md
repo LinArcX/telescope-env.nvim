@@ -30,12 +30,15 @@ require('telescope').load_extension('env')
 `:Telescope env`
 
 # Contribution
-If you have any idea to improve this project, please create a pull-request for it. To make changes consistent, i have some rules for PRs:
+If you have any idea to improve this project, please create a pull-request for it. To make changes consistent, i have some rules:
 1. Before submit your work, please format it with [StyLua](https://github.com/JohnnyMorganz/StyLua).
-  1.1. I provided an __.stylua__ file in root of the project. Just call: `stylua lua/telescope/_extensions/env.lua`
+    1. Just go to root of the project and call: `stylua .`
+
 2. There should be a one-to-one relation between features and pull requests. Please create separate pull-requests for each feature.
+3. Please use [snake_case](https://en.wikipedia.org/wiki/Snake_case) for function names ans local variables
 
 # Roadmap :blue_car:
 - [ ] copy selected value when select an item in picker.
-- [ ] use previews because some variables like `PATH` don't fit on screen.
 - [ ] ability to add temporary variables.
+- [ ] use previews, because some variables like `PATH` don't fit on screen.
+- [ ] `PATH` is a special variable! It's cool to allow people to add, remove and edit items of it.
