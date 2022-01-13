@@ -15,7 +15,7 @@ local function prepareEnvironmentVariables()
 end
 
 local function appendEnvironmentValue(prompt_bufnr)
-  local selection = action_state.get_selected_entry(prompt_bufnr)
+  local selection = action_state.get_selected_entry()
   actions.close(prompt_bufnr)
   if selection.value == "" then
     return
@@ -26,7 +26,7 @@ local function appendEnvironmentValue(prompt_bufnr)
 end
 
 local function appendEnvironmentName(prompt_bufnr)
-  local selection = action_state.get_selected_entry(prompt_bufnr)
+  local selection = action_state.get_selected_entry()
   actions.close(prompt_bufnr)
   if selection.value == "" then
     return
@@ -37,7 +37,7 @@ local function appendEnvironmentName(prompt_bufnr)
 end
 
 local function editEnvironmentValue(prompt_bufnr)
-  local selection = action_state.get_selected_entry(prompt_bufnr)
+  local selection = action_state.get_selected_entry()
   actions.close(prompt_bufnr)
   local value = vim.fn.input("[ENV] Enter new value: ", selection.value[2])
   if value == "" then
