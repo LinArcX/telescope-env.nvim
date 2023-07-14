@@ -55,10 +55,11 @@ local function show_environment_variables(opts)
       results = prepare_environment_variables(),
       entry_maker = function(entry)
         local columns = vim.o.columns
-        local width = conf.width
+        local tmp = conf.width
           or conf.layout_config.width
           or conf.layout_config[conf.layout_strategy].width
           or columns
+        local width = require("telescope.config.resolve").resolve_width(tmp)(columns, vim.o.lines)
         local telescope_width
         if width > 1 then
           telescope_width = width
